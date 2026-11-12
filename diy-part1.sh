@@ -10,9 +10,7 @@
 # See /LICENSE for more information.
 #
 
-# Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-
 # Add a feed source
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+git clone --depth=1 https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
+git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
+git clone https://github.com/DongyangHu/luci-app-poweroff.git package/luci-app-poweroff
