@@ -11,6 +11,7 @@
 #
 
 # Add a feed source
-git clone --depth=1 https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
+git clone --depth=1 https://github.com/immortalwrt/homeproxy.git package/homeproxy
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-app-argon
 git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
 git clone https://github.com/DongyangHu/luci-app-poweroff.git package/luci-app-poweroff
