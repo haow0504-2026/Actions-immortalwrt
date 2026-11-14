@@ -13,4 +13,7 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.1.253/g' package/base-files/files/bin/config_generate
 
-
+git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall-packages /tmp/passwall-packages
+rm -rf feeds/packages/net/sing-box
+cp -rf /tmp/passwall-packages/sing-box feeds/packages/net/sing-box
+rm -rf /tmp/passwall-packages
