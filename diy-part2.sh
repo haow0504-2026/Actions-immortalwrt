@@ -15,3 +15,5 @@ sed -i 's/192.168.1.1/192.168.1.253/g' package/base-files/files/bin/config_gener
 
 git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
 git clone https://github.com/DongyangHu/luci-app-poweroff.git package/luci-app-poweroff
+
+sed -i "s/R[0-9]\+\.[0-9]\+\.[0-9]\+/& ($(TZ='Asia/Shanghai' date +"%Y.%m.%d"))/g" package/lean/default-settings/files/zzz-default-settings
