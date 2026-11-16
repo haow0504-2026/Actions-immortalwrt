@@ -13,8 +13,8 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.1.253/g' package/base-files/files/bin/config_generate
 
-# 修改 SSH 登录欢迎界面的编译日期标签
+# Modify the build date label in the SSH login welcome screen
 sed -i "s/%D %V, %C/%D %V, %C (Built on $(TZ='Asia/Shanghai' date +"%Y.%m.%d"))/g" package/base-files/files/etc/banner
 
-# 修改网页后台“固件版本”末尾的修订号显示
+# Modify the display of the revision number at the end of the "Firmware Version" in the web backend
 sed -i "s/%R/%R ($(TZ='Asia/Shanghai' date +"%Y.%m.%d"))/g" package/base-files/files/etc/openwrt_release
